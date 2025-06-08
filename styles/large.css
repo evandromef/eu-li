@@ -5,72 +5,66 @@
         --font1: normal normal 1em 'Inter', sans-serif;
         --color1: #044b04;
     }
-    
-    body > footer {
-        font-size: .9em;
+
+    /* Layout Containers */
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
+    main {
+        flex: 1 1 250px;
+        max-width: 780px;
+        padding: 0 12px;
+    }
+
+    #right-section {
+        display: block;
+        flex: 0 0 200px;
+        width: 200px;
+    }
+
+    /* Header */
     #header-logo h1 {
-        font-size: 4em;    
+        font-size: 4em;
     }
 
     #header-quote blockquote {
         font-size: 1em;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.226);
-        width: 800px;
+        max-width: 800px;
         margin: auto;
+        padding: 16px;
     }
 
     .header-bottom {
         font-size: 1.2em;
-        width: 960px;
     }
-    .header-bottom a {
+
+    .header-bottom a,
+    .header-bottom a:first-child {
         margin-left: 16px;
         margin-right: 0;
     }
 
-    /* Hide summary list ul item
-    .header-bottom a:nth-child(2) {
-        display: none;
-    } 
-    */
-
-    .container {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        background-color: #044b041f;
-        padding-top: 16px;
-        padding-bottom: 16px;
+    /* Footer */
+    body > footer {
+        padding: 24px 8px 8px 8px;
+        font-size: .9em;
     }
 
-    #right-section {
-        display: block;
-        width: 200px;
-    }
-
+    /* Categories */
     #categories-section {
-        font-size: .9em;        
+        font-size: .9em;
     }
 
-    main {
-        max-width: 768px;
-        padding: 16px;
-
-        margin: 0 8px;
-        border-radius: 8px;
-        box-shadow: 2px 2px 8px 0px #0000001c;
-    }     
-
-    ul {
-        width: 100%;
-        list-style: none;
-        
-    }
-
-    ul li{
-        padding: 6px;
+    /* Lists */
+    ul li {
+        padding: 4px;
     }
 
     ul li a {
@@ -82,25 +76,93 @@
         text-decoration: underline;
     }
 
-    .summary-item article{
+    /* Summary List */
+    .summary-list {
+        margin-top: 0;
+    }
+
+    .summary-item {
+        flex: 0 0 240px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .summary-item article {
         display: flex;
+        flex-flow: column nowrap;
+        padding: 4px;
     }
 
     .summary-item article img {
+        width: 220px;
+    }
+
+    .summary-item article h3 {
+        margin-top: 8px;
+        padding: 6px;
+    }
+
+    .summary-item article > a {
+        font-size: .8em;
+    }
+
+    .summary-item article p {
+        font-size: .9em;
+    }
+
+    .summary-item article footer,
+    .index-item-content p,
+    .index-item-content footer,
+    .index-item-content h3 a {
+        font-size: 1em;
+    }
+
+    .summary-item p,
+    .index-item-content p {
+        height: 100px;
+    }
+
+    /* Index List */
+    .index-list {
+        margin-top: 0;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .index-item {
+        flex: 1 1 640px;
+        padding: 16px !important;
+    }
+
+    .index-item:first-child {
+        margin-top: 0;
+    }
+
+    .index-item article {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+    }
+
+    .index-item article h3 {
+        margin-top: 0;
+        padding-bottom: 4px;
+        background-color: unset;
+        text-align: left;
+        border-bottom: 1px solid #40404077;
+        border-radius: 0;
+    }
+
+    .index-item article a {
+        flex: 0 1 310px;
+    }
+
+    .index-item article div {
+        flex: 1 1 300px;
+    }
+
+    .index-item article img {
         flex-basis: 300px;
+        width: 300px;
     }
-
-    /* .summary-item:nth-child(odd) article {
-        flex-direction: row-reverse;
-    } */
-    .summary-item-content {
-        position: relative;
-    }
-
-    .summary-item-content footer{
-        position: absolute;
-        right: 16px;
-        bottom: 4px;
-    }
-    
 }

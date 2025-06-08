@@ -108,6 +108,7 @@
 
     .summary-item article p {
         font-size: .9em;
+        height: 100px
     }
 
     .summary-item article footer,
@@ -117,9 +118,9 @@
         font-size: 1em;
     }
 
-    .summary-item p,
     .index-item-content p {
-        height: 100px;
+        height: 120px !important;
+        font-size: 1em !important;
     }
 
     /* Index List */
